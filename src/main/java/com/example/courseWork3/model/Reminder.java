@@ -10,18 +10,17 @@ public class Reminder {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Long chat_id;
-    private String task_text;
+    private Long chatId;
+    private String taskText;
 
     private LocalDateTime sendTime;
 
     public Reminder() {
     }
 
-    public Reminder(Integer id, Long chat_id, String task_text, LocalDateTime sendTime) {
-        this.id = id;
-        this.chat_id = chat_id;
-        this.task_text = task_text;
+    public Reminder(Long chatId, String taskText, LocalDateTime sendTime) {
+        this.chatId = chatId;
+        this.taskText = taskText;
         this.sendTime = sendTime;
     }
 
@@ -33,20 +32,20 @@ public class Reminder {
         this.id = id;
     }
 
-    public Long getChat_id() {
-        return chat_id;
+    public Long getChatId() {
+        return chatId;
     }
 
-    public void setChat_id(Long chat_id) {
-        this.chat_id = chat_id;
+    public void setChatId(Long chatId) {
+        this.chatId = chatId;
     }
 
-    public String getTask_text() {
-        return task_text;
+    public String getTaskText() {
+        return taskText;
     }
 
-    public void setTask_text(String task_text) {
-        this.task_text = task_text;
+    public void setTaskText(String taskText) {
+        this.taskText = taskText;
     }
 
     public LocalDateTime getSendTime() {
